@@ -2,10 +2,10 @@ from discord.ext import commands
 import discord
 from asyncio import sleep
 from datetime import datetime as dt
+from notion.client import NotionClient
 
 
-TOKEN = 'MTA4NTE1MTA0MjI4ODc1MDY5NA.Ga5db4.Xm9QDtndOompX90AKey8adA4x_f_y_iNqTkKg8'
-
+TOKEN = 'MTA4NTE1MTA0MjI4ODc1MDY5NA.Gl-OoK.AXjbtDOc-vrIf4pD3qR5We9pdj-6wMoV2JRDAc'
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
@@ -60,6 +60,7 @@ class Menu(discord.ui.View):
 
 @bot.command()
 async def remind(ctx):
+
     await ctx.send("When do you want to be reminded?")
     remind_date = await bot.wait_for('message', check=lambda message: message.author == ctx.author)
     remind_date_str = remind_date.content
@@ -89,6 +90,8 @@ async def remind(ctx):
         extra_info = await bot.wait_for('message', check=lambda message: message.author == ctx.author)
 
     await ctx.send(f"I will remind you at {remind_date_str}")
+
+
 
     date_object = dt.strptime(remind_date_str, '%d-%m-%Y-%H-%M')
     date1 = (today_date - date_object) * (-1)
