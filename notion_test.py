@@ -1,8 +1,8 @@
 import requests
 import json
 
-notion_token = "secret_AC2ZDas2trmXAs8mtq0bomMVWKrLugU1dfOrzml2jV4"
-database_id = "028e6cf3082043c3a140e3de354abf52"
+notion_token = ""
+database_id = ""
 url = f"https://api.notion.com/v1/databases/{database_id}/query"
 
 payload = {"page_size": 100}

@@ -5,7 +5,7 @@ from datetime import datetime as dt
 from notion.client import NotionClient
 
 
-TOKEN = 'MTA4NTE1MTA0MjI4ODc1MDY5NA.Gl-OoK.AXjbtDOc-vrIf4pD3qR5We9pdj-6wMoV2JRDAc'
+TOKEN = ''
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
