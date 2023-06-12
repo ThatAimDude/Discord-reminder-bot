@@ -28,10 +28,29 @@ for result in data["results"]:
     else:
         date = "N/A"
 
+    if "Description" in result["properties"] and result["properties"]["Description"].get("rich_text"):
+        description = result["properties"]["Description"]["rich_text"][0]["plain_text"]
+    else:
+        description = "N/A"
+
+    if "Subject" in result["properties"] and result["properties"]["Subject"].get("select"):
+        subject = result["properties"]["Subject"]["select"]["name"]
+    else:
+        subject = "N/A"
+
+    if "Type" in result["properties"] and result["properties"]["Type"].get("select"):
+        type = result["properties"]["Type"]["select"]["name"]
+    else:
+        type = "N/A"
+
     result_data = {
         "Name": name,
-        "Date": date
+        "Date": date,
+        "Description": description,
+        "Subject": subject,
+        "Type": type
     }
+
     results.append(result_data)
 
 output_data = {

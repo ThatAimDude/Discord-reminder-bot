@@ -1,72 +1,116 @@
 {
     "results": [
         {
-            "Name": "nigas in paris",
-            "Date": "2023-06-30"
-        },
-        {
-            "Name": "test",
-            "Date": "2023-06-12"
+            "Name": "Presentacja Bazy danych project",
+            "Date": "2023-06-12",
+            "Description": "N/A",
+            "Subject": "Bazy Danych",
+            "Type": "Project"
         },
         {
             "Name": "Date Text",
-            "Date": "N/A"
+            "Date": "N/A",
+            "Description": "N/A",
+            "Subject": "N/A",
+            "Type": "N/A"
         },
         {
             "Name": "grafika komputerowa rwd ",
-            "Date": "2023-06-09"
+            "Date": "2023-06-09",
+            "Description": "N/A",
+            "Subject": "N/A",
+            "Type": "N/A"
         },
         {
             "Name": "give in polish homework",
-            "Date": "N/A"
+            "Date": "N/A",
+            "Description": "N/A",
+            "Subject": "N/A",
+            "Type": "N/A"
         },
         {
             "Name": "Grafika komputerowa sprawdzian",
-            "Date": "2023-06-16"
+            "Date": "2023-06-16",
+            "Description": "N/A",
+            "Subject": "Grafika",
+            "Type": "Sprawdzian"
         },
         {
             "Name": "Bazy danych databse creation",
-            "Date": "2023-06-02"
+            "Date": "2023-06-02",
+            "Description": "N/A",
+            "Subject": "Bazy Danych",
+            "Type": "Project"
         },
         {
             "Name": "N/A",
-            "Date": "N/A"
+            "Date": "N/A",
+            "Description": "N/A",
+            "Subject": "N/A",
+            "Type": "N/A"
         },
         {
             "Name": "N/A",
-            "Date": "N/A"
+            "Date": "N/A",
+            "Description": "N/A",
+            "Subject": "N/A",
+            "Type": "N/A"
         },
         {
             "Name": "Cancel discord nitro",
-            "Date": "2023-06-26"
+            "Date": "2023-06-26",
+            "Description": "N/A",
+            "Subject": "N/A",
+            "Type": "N/A"
         },
         {
             "Name": "Sprawdzian Polski",
-            "Date": "2023-06-06"
+            "Date": "2023-06-06",
+            "Description": "N/A",
+            "Subject": "Polski",
+            "Type": "Sprawdzian"
         },
         {
             "Name": "Praca Domowa polski",
-            "Date": "2023-06-06"
+            "Date": "2023-06-06",
+            "Description": "N/A",
+            "Subject": "Polski",
+            "Type": "Home Work"
         },
         {
             "Name": "Sprawdzian koncowy CTF",
-            "Date": "2023-06-05"
+            "Date": "2023-06-05",
+            "Description": "N/A",
+            "Subject": "PI",
+            "Type": "Sprawdzian"
         },
         {
             "Name": "Project Grafika",
-            "Date": "2023-06-02"
+            "Date": "2023-06-02",
+            "Description": "N/A",
+            "Subject": "Grafika",
+            "Type": "Project"
         },
         {
             "Name": "PSI czwiczenia",
-            "Date": "2023-05-31"
+            "Date": "2023-05-31",
+            "Description": "N/A",
+            "Subject": "PSI",
+            "Type": "Home Work"
         },
         {
             "Name": "Maszynka",
-            "Date": "2023-05-30"
+            "Date": "2023-05-30",
+            "Description": "N/A",
+            "Subject": "PI",
+            "Type": "Home Work"
         },
         {
             "Name": "Fizyks sprawdzian",
-            "Date": "2023-06-02"
+            "Date": "2023-06-02",
+            "Description": "N/A",
+            "Subject": "Fizyka",
+            "Type": "Sprawdzian"
         }
     ]
 }

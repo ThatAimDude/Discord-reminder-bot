@@ -12,6 +12,10 @@ bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 today_date = dt.now()
 
 
+
+
+
+
 class Menu(discord.ui.View):
     def __init__(self):
         super().__init__()
