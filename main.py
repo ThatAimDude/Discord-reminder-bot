@@ -2,16 +2,30 @@ from discord.ext import commands
 import discord
 from asyncio import sleep
 from datetime import datetime as dt
-from notion.client import NotionClient
+import requests
+import json
 
 
-TOKEN = ''
+
+TOKEN = 'MTA4NTE1MTA0MjI4ODc1MDY5NA.GL3a_u.gp4SPSxj8DjBLu7RfdaOWGSGxFexkb-oeN72Ic'
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 today_date = dt.now()
 
 
+class MockContext:
+    def __init__(self):
+        self.message = MockMessage()
+
+class MockMessage:
+    def __init__(self):
+        self.author = MockAuthor()
+
+class MockAuthor:
+    def __init__(self):
+        # Add necessary attributes for the author (e.g., id, name, etc.)
+        pass
 
 
 
@@ -125,5 +139,39 @@ async def remind(ctx):
         member = ctx.message.author
         await member.send(embed=embed)
         break
+
+
+@bot.event
+async def on_ready():
+    print(f"Logged in as {bot.user.name}")
+    await send_notion_reminders()
+
+async def send_notion_reminders():
+    notion_token = "secret_bKrCxad0LUjcrJaBRXBHguMhXTMozmfypoJ24EJPrrv"
+    database_id = "028e6cf3082043c3a140e3de354abf52"
+    url = f"https://api.notion.com/v1/databases/{database_id}/query"
+
+    payload = {"page_size": 100}
+    headers = {
+        "Authorization": f"Bearer {notion_token}",
+        "Notion-Version": "2022-06-28",
+        "Content-Type": "application/json"
+    }
+
+    response = requests.post(url, json=payload, headers=headers)
+    data = json.loads(response.text)
+
+    for result in data["results"]:
+        if "Date" in result["properties"] and result["properties"]["Date"].get("date"):
+            date = result["properties"]["Date"]["date"]["start"]
+        else:
+            date = "N/A"
+        # remind_date_str = dt.strftime('%d-%m-%Y-%H-%M')
+        # print(remind_date_str)
+        print(date)
+
+# Run the bot
+bot.run(TOKEN)
+
 
 bot.run(TOKEN)
