@@ -7,7 +7,7 @@ import json
 
 
 
-TOKEN = 'MTA4NTE1MTA0MjI4ODc1MDY5NA.GL3a_u.gp4SPSxj8DjBLu7RfdaOWGSGxFexkb-oeN72Ic'
+TOKEN = ''
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
